@@ -1,0 +1,296 @@
+<!doctype html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>I bonus di Noi Due e l'Ultimo Ospite</title>
+<meta name="description" content="Tre materiali gratuiti per chi ha il libro Noi Due e l'Ultimo Ospite di Giulia Selli: Kit della Vigilia, Fascicolo del Taccuino ed Epilogo di Ada.">
+<meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500&family=Lora:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --notte: #0a1128;
+    --notte-2: #111b3d;
+    --rosso: #6e1a26;
+    --rosso-vivo: #8f2434;
+    --oro: #d6ad5c;
+    --oro-chiaro: #f1d894;
+    --crema: #f4ead2;
+    --carta: #fbf4e2;
+    --inchiostro: #2b2118;
+    --display: "Cormorant Garamond", Georgia, serif;
+    --testo: "Lora", Georgia, serif;
+    color-scheme: dark;
+  }
+  [hidden] { display: none !important; }
+  * { box-sizing: border-box; }
+  html { background: var(--notte); scroll-behavior: smooth; }
+  body {
+    margin: 0;
+    font-family: var(--testo);
+    font-size: 1.05rem;
+    line-height: 1.65;
+    color: var(--crema);
+    background:
+      radial-gradient(1000px 520px at 85% -5%, rgba(214,173,92,.16), transparent 60%),
+      radial-gradient(800px 600px at 0% 60%, rgba(110,26,38,.30), transparent 65%),
+      linear-gradient(180deg, var(--notte), var(--notte-2) 55%, var(--notte));
+    padding-left: max(16px, env(safe-area-inset-left, 0px));
+    padding-right: max(16px, env(safe-area-inset-right, 0px));
+  }
+  .wrap { max-width: 1040px; margin: 0 auto; }
+  a { color: var(--oro-chiaro); }
+  :focus-visible { outline: 3px solid var(--oro-chiaro); outline-offset: 3px; }
+
+  /* Testata */
+  .testata {
+    display: flex; justify-content: space-between; gap: 12px; flex-wrap: wrap;
+    padding: 22px 0; border-bottom: 1px solid rgba(214,173,92,.25);
+    font-family: var(--display); font-size: 1.05rem; letter-spacing: .18em; text-transform: uppercase; color: var(--oro);
+  }
+
+  /* Hero */
+  .hero {
+    display: grid; grid-template-columns: minmax(0, 1.25fr) minmax(0, .75fr);
+    gap: clamp(28px, 6vw, 72px); align-items: center; padding: clamp(36px, 7vw, 84px) 0;
+  }
+  .eyebrow { font-family: var(--display); font-weight: 600; font-size: 1.05rem; letter-spacing: .26em; text-transform: uppercase; color: var(--oro); margin: 0 0 16px; }
+  h1 {
+    font-family: var(--display); font-weight: 700; margin: 0 0 20px;
+    font-size: clamp(2.3rem, 6.4vw, 4.2rem); line-height: 1.02; color: var(--oro-chiaro); text-wrap: balance;
+  }
+  .lead { margin: 0 0 28px; max-width: 32em; font-size: 1.12rem; color: #e3d7bb; }
+  .cta {
+    display: inline-block; padding: 14px 26px; text-decoration: none; cursor: pointer;
+    font-family: var(--display); font-weight: 700; font-size: 1.1rem; letter-spacing: .16em; text-transform: uppercase;
+    color: #1d1405; background: linear-gradient(180deg, var(--oro-chiaro), var(--oro));
+    border: 0; border-radius: 2px; box-shadow: 0 3px 0 #8a6a2a;
+  }
+  .copertina { margin: 0; justify-self: center; width: min(100%, 330px); transform: rotate(2.2deg); }
+  .copertina img {
+    display: block; width: 100%; height: auto; border-radius: 3px;
+    box-shadow: 0 40px 70px -24px rgba(0,0,0,.85), 0 0 0 1px rgba(214,173,92,.4);
+  }
+
+  /* Tre bonus */
+  .titolo-sezione {
+    font-family: var(--display); font-weight: 700; font-size: clamp(1.7rem, 4vw, 2.4rem);
+    color: var(--oro-chiaro); margin: 0 0 8px; text-align: center;
+  }
+  .sottotitolo { text-align: center; margin: 0 auto 36px; max-width: 34em; color: #d6c9ab; }
+  .carte { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px; margin: 0 0 clamp(48px, 8vw, 96px); padding: 0; list-style: none; }
+  .carte li {
+    background: linear-gradient(180deg, rgba(244,234,210,.07), rgba(244,234,210,.03));
+    border: 1px solid rgba(214,173,92,.32); border-radius: 3px; padding: 26px 24px 28px;
+  }
+  .numero { font-family: var(--display); font-size: 2.6rem; line-height: 1; font-weight: 600; color: var(--oro); margin: 0 0 10px; }
+  .carte h3 { font-family: var(--display); font-weight: 700; font-size: 1.5rem; line-height: 1.15; margin: 0 0 8px; color: var(--crema); }
+  .carte p { margin: 0; color: #d3c6a8; font-size: .98rem; }
+  .carte .avviso { margin-top: 10px; font-style: italic; color: var(--oro-chiaro); }
+
+  /* Modulo */
+  .modulo-wrap { max-width: 640px; margin: 0 auto; padding-bottom: clamp(48px, 8vw, 90px); scroll-margin-top: 24px; }
+  .carta {
+    background: var(--carta); color: var(--inchiostro); border-radius: 3px;
+    padding: clamp(22px, 5vw, 38px); position: relative;
+    box-shadow: 0 30px 60px -28px rgba(0,0,0,.9), inset 0 0 0 1px rgba(110,26,38,.3);
+  }
+  .carta::before { content: ""; position: absolute; inset: 8px; border: 1px solid rgba(110,26,38,.28); pointer-events: none; border-radius: 2px; }
+  .carta h2 { font-family: var(--display); font-weight: 700; font-size: 1.9rem; line-height: 1.1; margin: 0 0 6px; color: var(--rosso); }
+  .carta .sotto { margin: 0 0 22px; color: #5a4a38; }
+  .campi { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+  .campi .intero { grid-column: 1 / -1; }
+  label { display: block; font-size: .92rem; font-weight: 500; margin-bottom: 5px; }
+  input[type=text], input[type=email] {
+    width: 100%; min-width: 0; font: inherit; font-size: 1.05rem; color: var(--inchiostro);
+    background: #fffdf6; border: 1px solid #b4a07a; border-radius: 2px; padding: 12px;
+  }
+  .carta :focus-visible { outline-color: var(--rosso-vivo); }
+  .consenso { display: grid; grid-template-columns: 22px minmax(0, 1fr); gap: 10px; align-items: start; margin-top: 18px; font-size: .92rem; }
+  .consenso input { width: 20px; height: 20px; margin: 3px 0 0; accent-color: var(--rosso-vivo); }
+  .consenso label { margin: 0; font-weight: 400; }
+  details { margin-top: 12px; font-size: .88rem; color: #4d3f2f; }
+  summary { cursor: pointer; color: var(--rosso); font-weight: 500; }
+  details p { margin: 8px 0 0; }
+  .trappola { position: absolute; left: -10000px; width: 1px; height: 1px; overflow: hidden; }
+  button.invia, a.apri {
+    display: block; width: 100%; margin-top: 22px; padding: 15px 18px; cursor: pointer; text-align: center; text-decoration: none;
+    font-family: var(--display); font-weight: 700; font-size: 1.15rem; letter-spacing: .16em; text-transform: uppercase;
+    color: #fff6e0; background: linear-gradient(180deg, var(--rosso-vivo), var(--rosso));
+    border: 0; border-radius: 2px; box-shadow: 0 3px 0 #3f0d15;
+  }
+  button.invia:disabled { opacity: .65; cursor: progress; }
+  .errore { margin: 14px 0 0; color: #8f1d12; font-weight: 500; min-height: 1.4em; }
+  .pronto ul { margin: 0; padding-left: 1.1em; }
+  .nota { margin: 16px 0 0; font-size: .9rem; color: #5a4a38; }
+
+  footer { border-top: 1px solid rgba(214,173,92,.2); padding: 22px 0 40px; text-align: center; font-size: .85rem; color: #b8ab8c; }
+
+  @media (max-width: 860px) {
+    .hero { grid-template-columns: minmax(0, 1fr); text-align: center; }
+    .lead { margin-inline: auto; }
+    .copertina { order: -1; width: min(70%, 250px); transform: none; }
+    .carte { grid-template-columns: minmax(0, 1fr); }
+  }
+  @media (max-width: 480px) {
+    .campi { grid-template-columns: minmax(0, 1fr); }
+    .testata { justify-content: center; text-align: center; }
+  }
+  @media (prefers-reduced-motion: no-preference) {
+    .copertina img { animation: entra .7s ease-out both; }
+    @keyframes entra { from { opacity: 0; transform: translateY(14px); } to { opacity: 1; transform: none; } }
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header class="testata"><span>Giulia Selli</span><span>Noi Due e l'Ultimo Ospite</span></header>
+
+  <section class="hero">
+    <div>
+      <p class="eyebrow">Riservato a chi ha il libro</p>
+      <h1>Il caso è chiuso. Ma sul tavolo c'è ancora qualcosa.</h1>
+      <p class="lead">Tre materiali gratuiti per le vostre sere d'Avvento: due da stampare per giocare meglio, uno da aprire solo dopo l'ultima pagina.</p>
+      <a class="cta" href="#modulo">Voglio i bonus</a>
+    </div>
+    <figure class="copertina">
+      <img src="copertina.jpg" width="720" height="1080" alt="Copertina di Noi Due e l'Ultimo Ospite, Calendario dell'Avvento, escape room per coppie, di Giulia Selli">
+    </figure>
+  </section>
+
+  <section aria-labelledby="t-bonus">
+    <h2 class="titolo-sezione" id="t-bonus">Cosa trovi nella cartella</h2>
+    <p class="sottotitolo">Tre PDF, pronti da aprire e da stampare.</p>
+    <ul class="carte">
+      <li>
+        <p class="numero" aria-hidden="true">I</p>
+        <h3>Il Kit della Vigilia</h3>
+        <p>Il menù per la tavola, i segnaposto con la sedia in più, il biglietto «Chi bussa a Natale va fatto sedere» e il punteggio dei due detective.</p>
+      </li>
+      <li>
+        <p class="numero" aria-hidden="true">II</p>
+        <h3>Il Fascicolo del Taccuino</h3>
+        <p>Linea del tempo, rete dei legami, griglia degli alibi e verdetto finale: fogli vuoti per indagare in due, con una penna e poche copie.</p>
+      </li>
+      <li>
+        <p class="numero" aria-hidden="true">III</p>
+        <h3>L'Epilogo di Ada</h3>
+        <p>La lettera del 25 dicembre.</p>
+        <p class="avviso">Contiene la conclusione: apritela solo dopo l'ultima pagina.</p>
+      </li>
+    </ul>
+  </section>
+
+  <section class="modulo-wrap" id="modulo">
+    <div class="carta" id="blocco-form">
+      <h2>Dove li mandiamo?</h2>
+      <p class="sotto">Nome, cognome ed email. La cartella si apre subito dopo l'invio.</p>
+      <form id="form" novalidate>
+        <div class="campi">
+          <div>
+            <label for="nome">Nome</label>
+            <input id="nome" name="nome" type="text" autocomplete="given-name" maxlength="60" required>
+          </div>
+          <div>
+            <label for="cognome">Cognome</label>
+            <input id="cognome" name="cognome" type="text" autocomplete="family-name" maxlength="60" required>
+          </div>
+          <div class="intero">
+            <label for="email">Email</label>
+            <input id="email" name="email" type="email" autocomplete="email" inputmode="email" maxlength="254" required>
+          </div>
+        </div>
+        <div class="trappola" aria-hidden="true">
+          <label for="sito">Lascia vuoto questo campo</label>
+          <input id="sito" name="sito" type="text" tabindex="-1" autocomplete="off">
+        </div>
+        <div class="consenso">
+          <input id="consenso" name="consenso" type="checkbox" required>
+          <label for="consenso">Acconsento al trattamento di nome ed email per ricevere i bonus e comunicazioni su questo libro e sui prossimi di Giulia Selli.</label>
+        </div>
+        <details>
+          <summary>Come usiamo i tuoi dati</summary>
+          <p>Titolare del trattamento: Giulia Selli. Nome, cognome ed email servono a darti accesso ai bonus e a scriverti del libro e delle prossime uscite. Non vengono ceduti a terzi. Puoi chiedere in qualsiasi momento di consultarli, correggerli o cancellarli, e di non ricevere più messaggi, rispondendo a una qualsiasi nostra email.</p>
+        </details>
+        <button class="invia" id="invia" type="submit">Apri i bonus</button>
+        <p class="errore" id="errore" role="alert" aria-live="assertive"></p>
+      </form>
+    </div>
+
+    <div class="carta pronto" id="blocco-pronto" hidden>
+      <h2 id="saluto">I bonus sono pronti</h2>
+      <p class="sotto">Si aprono in una cartella di Google Drive, in sola lettura.</p>
+      <ul>
+        <li>Il Kit della Vigilia</li>
+        <li>Il Fascicolo del Taccuino</li>
+        <li>L'Epilogo di Ada: dopo l'ultima pagina</li>
+      </ul>
+      <a class="apri" id="apri" href="#" target="_blank" rel="noopener noreferrer">Apri la cartella dei bonus</a>
+      <p class="nota">Salva questa pagina tra i preferiti: potrai tornare a riaprire la cartella.</p>
+    </div>
+  </section>
+
+  <footer>© Giulia Selli · Questa pagina è riservata ai lettori del libro.</footer>
+</div>
+
+<script>
+(function () {
+  var form = document.getElementById('form');
+  var btn = document.getElementById('invia');
+  var err = document.getElementById('errore');
+  var blocco = document.getElementById('blocco-form');
+  var pronto = document.getElementById('blocco-pronto');
+  var apri = document.getElementById('apri');
+  var saluto = document.getElementById('saluto');
+  var EMAIL = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/;
+
+  function msg(t) { err.textContent = t || ''; }
+
+  form.addEventListener('submit', function (ev) {
+    ev.preventDefault();
+    msg('');
+    var nome = form.nome.value.trim();
+    var cognome = form.cognome.value.trim();
+    var email = form.email.value.trim();
+    if (!nome) { msg('Scrivi il tuo nome.'); form.nome.focus(); return; }
+    if (!cognome) { msg('Scrivi il tuo cognome.'); form.cognome.focus(); return; }
+    if (!EMAIL.test(email)) { msg("L'email non sembra corretta. Controlla e riprova."); form.email.focus(); return; }
+    if (!form.consenso.checked) { msg('Per aprire i bonus serve spuntare il consenso.'); form.consenso.focus(); return; }
+
+    btn.disabled = true;
+    var etichetta = btn.textContent;
+    btn.textContent = 'Un momento…';
+
+    fetch('/api/submit', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ nome: nome, cognome: cognome, email: email, consenso: true, sito: form.sito.value })
+    })
+      .then(function (r) { return r.json().catch(function () { return {}; }); })
+      .then(function (data) {
+        if (data && data.ok === true && typeof data.bonusUrl === 'string' && data.bonusUrl) {
+          apri.href = data.bonusUrl;
+          saluto.textContent = 'Grazie, ' + nome + '. I bonus sono pronti';
+          blocco.hidden = true;
+          pronto.hidden = false;
+          apri.focus();
+        } else if (data && data.error === 'dati') {
+          msg('Controlla i dati inseriti e riprova.');
+        } else {
+          msg('Non siamo riusciti a salvare i tuoi dati. Riprova tra un momento.');
+        }
+      })
+      .catch(function () {
+        msg('Non riusciamo a collegarci. Controlla la connessione e riprova.');
+      })
+      .then(function () {
+        btn.disabled = false;
+        btn.textContent = etichetta;
+      });
+  });
+})();
+</script>
+</body>
+</html>

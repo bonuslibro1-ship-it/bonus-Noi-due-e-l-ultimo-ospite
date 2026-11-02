@@ -1,0 +1,8 @@
+{
+  "name": "noi-due-landing-bonus",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Landing page dei bonus di Noi Due e l'Ultimo Ospite",
+  "scripts": { "test": "node --test test/*.test.js" },
+  "engines": { "node": ">=18" }
+}
